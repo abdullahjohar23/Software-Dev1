@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package drinks.com;
+//import java.sql.*; ---------------> we'll use it later
+
+import java.awt.*;
 
 /**
  *
@@ -15,6 +18,16 @@ public class homepageFrame extends javax.swing.JFrame {
      */
     public homepageFrame() {
         initComponents();
+        
+        this.setResizable(false);
+        this.setAlwaysOnTop(true);
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        int xsize = (int)tk.getScreenSize().getWidth();
+        int ysize = (int)tk.getScreenSize().getHeight();
+        Insets scnMax = Toolkit.getDefaultToolkit().getScreenInsets(getGraphicsConfiguration());
+        int taskBarSize = scnMax.bottom;
+        
+        this.setSize(xsize, ysize - taskBarSize);
     }
 
     /**
@@ -86,7 +99,7 @@ public class homepageFrame extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(407, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,7 +240,6 @@ public class homepageFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        // TODO add your handling code here:
         System.exit(0) ;
     }//GEN-LAST:event_jButton1MouseClicked
 

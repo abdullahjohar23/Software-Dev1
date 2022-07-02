@@ -149,11 +149,11 @@ public class registrationFrame extends javax.swing.JFrame {
 
         jLabel19.setFont(new java.awt.Font("SimSun-ExtB", 1, 48)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel19.setText("Let's Medicine Be The Juice");
+        jLabel19.setText("Let's Juice Be The Medicine");
 
         jLabel7.setFont(new java.awt.Font("SimSun-ExtB", 1, 48)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel7.setText("& Juice Be The Medicine");
+        jLabel7.setText("& Medicine Be The Juice");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/drinks/com/logoBesideReg.jpg"))); // NOI18N
 

@@ -4,6 +4,9 @@
  */
 package drinks.com;
 
+import java.sql.ResultSet;
+import javax.swing.JFrame;
+
 /**
  *
  * @author Acer
@@ -15,6 +18,7 @@ public class employeeLoginFrame extends javax.swing.JFrame {
      */
     public employeeLoginFrame() {
         initComponents();
+        this.getRootPane().setDefaultButton(jButton1);
     }
 
     /**
@@ -80,6 +84,11 @@ public class employeeLoginFrame extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 102, 102));
         jButton1.setText("Log In");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -221,6 +230,36 @@ public class employeeLoginFrame extends javax.swing.JFrame {
         this.setVisible(false) ;
         new employeeOrCustomerFrame().setVisible(true) ;
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String inputUsername = jTextField1.getText() ;
+        String inputPassword = String.valueOf(jPasswordField1.getPassword()) ;
+        
+        String query = "select *from idpasstableforemp where Username = '" + inputUsername + "'" ;
+        String dbpassword = "" ;
+        
+        try {
+            ResultSet rs = DBUTILS.queryExecute(query);
+            if (rs.next()) {
+                dbpassword = rs.getString("Password") ;
+            }
+        } catch (Exception e) {
+            //e.printStackTrace();
+        }
+        
+        if (/*dbpassword != "" && */inputPassword.equals(dbpassword)) {
+            this.setVisible(false);
+            new afterEmployeeLogin().setVisible(true);
+        } else {
+            // wrong password
+            wrongPassBox wrongpass = new wrongPassBox();
+            wrongpass.setVisible(true);
+            wrongpass.pack();
+            wrongpass.setLocationRelativeTo(null);
+            wrongpass.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

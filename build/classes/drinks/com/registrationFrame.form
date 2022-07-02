@@ -274,7 +274,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Let&apos;s Medicine Be The Juice"/>
+            <Property name="text" type="java.lang.String" value="Let&apos;s Juice Be The Medicine"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
@@ -285,7 +285,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&amp; Juice Be The Medicine"/>
+            <Property name="text" type="java.lang.String" value="&amp; Medicine Be The Juice"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
