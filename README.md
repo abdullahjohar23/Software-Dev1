@@ -4,7 +4,7 @@ The application is created using
 - MySQL
 - NetBeans
 
-#Output
+# Output
 ![1  HomePage](https://github.com/user-attachments/assets/474bfbec-6403-420e-b324-a7ab24564d51)
 ![2  Just See The Menu](https://github.com/user-attachments/assets/602db85e-0bfe-4334-a758-9833b7354e6f)
 ![3  Sign Up](https://github.com/user-attachments/assets/6852cb91-72ca-4759-b808-30c2acf2d97d)
